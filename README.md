@@ -2,7 +2,7 @@
 
 # Deep Learning Applications Labs
 
-This repository contains the source code for the three laboratory assignments completed during the "Deep Learning Applications" course taught by Professor Andrew David Bagdanov (bagdanov on Github). The labs cover a variety of topics related to deep learning, including convolutional neural networks, large language models, and reinforcement learning.
+This repository contains the source code for the three laboratory assignments completed during the "Deep Learning Applications" course taught by Professor Andrew David Bagdanov ([@bagdanov](https://github.com/bagdanov) on Github). The labs cover a variety of topics related to deep learning, including convolutional neural networks, large language models, and reinforcement learning.
 
 ## Lab 1 - Convolutional Neural Networks
 
