@@ -39,9 +39,7 @@ Instead of implementing from scratch the **Class Activation Maps** mechanism, I 
 ["zhoubolei/CAM"](https://github.com/zhoubolei/CAM)
 
 #### Results
-The original code requires few modifications to work with my custom ResCNN, on CIFAR10.
-I have to only ....
-INSERISCI FIGURE
+The original code required few modifications to work with my custom ResCNN
 
 ## Lab 2 - Large Language Models
 
