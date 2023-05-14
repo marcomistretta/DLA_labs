@@ -1,2 +1,16 @@
 .idea/
 lab1/data/
+/lab2/dante_train.txt
+/lab2/input.txt
+/lab2/more.txt
+/lab2/results/dante_v0/dante_v0.pth
+/lab2/results/dante_v2/dante_v2.pth
+/lab2/results/dante_v5/dante_v5.pth
+/lab2/results/dante_v7/dante_v7.pth
+/lab2/results/dante_v7/dante_v7.txt
+/lab2/results/dante_default_big_lr/dante_default_big_lr.pth
+/lab2/results/dante_default/dante_default.txt
+/lab2/results/dante_default/dante_default.pth
+/lab1/model/cnn-ep5-lr0.001-bs512-depth5.pt
+/lab1/model/resnet_cnn-ep5-lr0.001-bs512-depth5-residual.pt
+/lab3/presentation/Presentazione_Laboratorio_FOML.pdf
