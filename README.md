@@ -176,8 +176,6 @@ I chose to reactor the original repository, so in the `lab3/` you can find:
 ### PPO
 A Minimal PyTorch implementation of Proximal Policy Optimization (PPO) with clipped objective for Gymnasyum environments has been addes as requested. You can find the implementation in  `PPO.py` (source code on: ["nikhilbarhate99/PPO-PyTorch"](https://github.com/nikhilbarhate99/PPO-PyTorch))
   
- 
-
 ### Notes
   
 To run the code in this repository, you will need to have Python 3 installed, as well as several deep learning libraries including PyTorch, and Hugging Face Transformers.
@@ -186,8 +184,8 @@ To get started, clone this repository to your local machine and navigate to the 
 
 ## Contributors
 
-This repository was created by **Marco Mistretta**. If you have any questions or concerns, please contact [marco.mistretta@stud.unifi.it].
+This repository was created by **Marco Mistretta**. If you have any questions or concerns, please contact marco.mistretta@stud.unifi.it.
 
 ### Acknowledgements
 
-We would like to thank Professor Andrew David Bagdanov for teaching the "Deep Learning Applications" course and providing guidance on these labs
+We would like to thank Professor Andrew David Bagdanov for teaching the **Deep Learning Applications**ì' course and providing guidance on these labs
