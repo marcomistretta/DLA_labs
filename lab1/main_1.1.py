@@ -14,11 +14,11 @@ if __name__ == '__main__':
     print("device:", device)
 
     batch_size = 2048
-    lr = 0.001
-    epochs = 5
+    lr = 0.0001
+    epochs = 30
     sizes = [128, 64, 10]  # layers size for the MLP
 
-    writer = create_summary_writer(lr, batch_size, epochs, mode="mlp", sizes=sizes)
+    writer = create_summary_writer(lr, batch_size, epochs, mode="mlp", sizes=sizes, folder="mlp")
 
     transform = transforms.Compose([
         transforms.ToTensor(),
@@ -39,7 +39,9 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=lr)
     trainer = Trainer(model, device, writer)
-
-    for epoch in range(1, epochs + 1):
-        trainer.train(train_loader, optimizer, criterion, epoch)
-        trainer.test(test_loader, criterion, epoch)
+    try:
+        for epoch in range(1, epochs + 1):
+            trainer.train(train_loader, optimizer, criterion, epoch)
+            trainer.test(test_loader, criterion, epoch)
+    finally:
+        torch.save(model, writer.log_dir.split("\\")[-1] + ".pt")

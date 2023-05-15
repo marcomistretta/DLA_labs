@@ -1,0 +1,13 @@
+numero caratteri train divina commedia: 186792
+lenght tokenized divina commedia: 79147
+ratio: 0.4237172898196925
+
+input text: Halfway down the road of life
+
+generator:
+[{'generated_text': 'Halfway down the road of life:
+    was a town known as the Black Dahlia.
+    A town where the most important people that resided here would come and go over their days and hours of time.
+    A place where one can buy their stuff of the year'
+}]
+

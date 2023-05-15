@@ -1,0 +1,26 @@
+# 1 SHIP
+0.998 -> ship
+0.001 -> automobile
+0.000 -> truck
+0.000 -> airplane
+0.000 -> bird
+0.000 -> horse
+0.000 -> frog
+0.000 -> cat
+0.000 -> deer
+0.000 -> dog
+
+# HD TRUCK
+
+0.998 -> truck
+0.001 -> automobile
+0.000 -> airplane
+0.000 -> ship
+0.000 -> cat
+0.000 -> horse
+0.000 -> deer
+0.000 -> bird
+0.000 -> frog
+0.000 -> dog
+
+

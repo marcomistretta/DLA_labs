@@ -25,7 +25,11 @@ class Trainer:
                 output = self.model(data)
 
             loss = criterion(output, target)
-            train_loss += loss.item()
+            batch_loss = loss.item()
+            if self.writer is not None:
+                self.writer.add_scalar('train/Batch-Loss', batch_loss, (epoch-1) * len(train_loader) + batch_idx)
+            train_loss += batch_loss
+
             loss.backward()
             optimizer.step()
 

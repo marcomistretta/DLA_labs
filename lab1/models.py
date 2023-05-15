@@ -20,10 +20,7 @@ class CNN(nn.Module):
     def __init__(self, num_classes=10, depth=20):
         super(CNN, self).__init__()
         print("CNN depth:", depth)
-        layers = []
-        layers.append(nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1))
-        layers.append(nn.BatchNorm2d(64))
-        layers.append(nn.ReLU(inplace=True))
+        layers = [nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1), nn.BatchNorm2d(64), nn.ReLU(inplace=True)]
         for _ in range(depth - 1):
             layers.append(nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1))
             layers.append(nn.BatchNorm2d(64))
@@ -43,10 +40,7 @@ class ResCNN(nn.Module):
     def __init__(self, num_classes=10, depth=20):
         super(ResCNN, self).__init__()
         print("ResCNN depth:", depth)
-        layers = []
-        layers.append(nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1))
-        layers.append(nn.BatchNorm2d(64))
-        layers.append(nn.ReLU(inplace=True))
+        layers = [nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1), nn.BatchNorm2d(64), nn.ReLU(inplace=True)]
         for _ in range(depth - 1):
             layers.append(BasicBlock(64, 64))
         self.features = nn.Sequential(*layers)

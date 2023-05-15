@@ -13,14 +13,17 @@ if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("device:", device)
 
+    # 1, 1024
+    # 5, 512
+    # 10, 256
+    # 20, 128
     batch_size = 512
-    lr = 0.001
-    epochs = 5
+    lr = 0.004
+    epochs = 30
 
     depth = 5
-    residual = False
-    writer = create_summary_writer(lr, batch_size, epochs, mode="cnn", depth=depth, residual=residual)
-
+    residual = True
+    writer = create_summary_writer(lr, batch_size, epochs, folder="deep_cnns_work_worst", mode="cnn", depth=depth, residual=residual)
     transform = transforms.Compose([
         transforms.ToTensor(),
         # transforms.Normalize((0.1307,), (0.3081,))
@@ -39,13 +42,14 @@ if __name__ == '__main__':
     else:
         model = CNN(depth=depth).to(device)
 
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.0001)
     criterion = nn.CrossEntropyLoss()
 
     trainer = Trainer(model, device, writer, conv_model=True)
-
-    for epoch in range(1, epochs + 1):
-        trainer.train(train_loader, optimizer, criterion, epoch)
-        trainer.test(test_loader, criterion, epoch)
-
-    # torch.save(model, "./model/cnn-ep5-lr0.001-bs512-depth5.pt")
+    try:
+        for epoch in range(1, epochs + 1):
+            trainer.train(train_loader, optimizer, criterion, epoch)
+            trainer.test(test_loader, criterion, epoch)
+    finally:
+        # playsound.playsound("mixkit-correct-answer-tone-2870.wav")
+        torch.save(model, writer.log_dir.split("\\")[-1] + ".pt")

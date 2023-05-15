@@ -13,11 +13,12 @@ vocab_size = len(chars)
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 txt_lenght = len(text)
 tokenized_txt_lenght = len(tokenizer(text)['input_ids'])
-print("lenght divina commedia:", txt_lenght)
+print("numero caratteri train divina commedia:", txt_lenght)
 print("lenght tokenized divina commedia:", tokenized_txt_lenght)
 print("ratio:", tokenized_txt_lenght / txt_lenght)
 
 generator = pipeline('text-generation', model='gpt2')
-input_prompt = "Nel mezzo del cammino di"
-print(input_prompt)
-print(generator(input_prompt, max_length=50, num_return_sequences=1, temperature=0.9))
+input_prompt = "Halfway down the road of life"
+print("input text:", input_prompt)
+# print(generator(input_prompt, max_length=50, num_return_sequences=1, temperature=0.9))
+print("generator:", generator(input_prompt, max_length=50, num_return_sequences=1))

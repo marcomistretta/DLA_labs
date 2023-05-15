@@ -14,12 +14,12 @@ def convert_to_string(l_sizes):
     return string
 
 
-def create_summary_writer(lr, batch_size, epochs, mode="mlp", sizes=None, depth=None, residual=None, cam=False):
+def create_summary_writer(lr, batch_size, epochs, folder, mode="mlp", sizes=None, depth=None, residual=None, cam=False):
     if mode == "mlp":
-        w_path = "./model/mlp-" + convert_to_string(sizes) + "-ep" + str(epochs) + "-lr" + str(lr) + "-bs" + str(batch_size)
+        w_path = "./model/"+folder+"/mlp-" + convert_to_string(sizes) + "-ep" + str(epochs) + "-lr" + str(lr) + "-bs" + str(batch_size)
     elif mode == "cnn":
         sub_string = "-not-residual" if not residual else "-residual"
-        w_path = "./model/cnn-ep"+str(epochs)+"-lr" + str(lr) + "-bs" + str(batch_size) + "-depth" + str(depth) + sub_string
+        w_path = "./model/"+folder+"/cnn-ep"+str(epochs)+"-lr" + str(lr) + "-bs" + str(batch_size) + "-depth" + str(depth) + sub_string
         if cam:
             w_path += "-cam"
     else:
