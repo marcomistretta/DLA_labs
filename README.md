@@ -1,3 +1,4 @@
+<html>
 # Deep Learning Applications Labs
 This repository contains the source code for the three laboratory assignments completed during the **Deep Learning Applications** course taught by **Professor Andrew David Bagdanov** ([@bagdanov](https://github.com/bagdanov) on Github). The labs cover a variety of topics related to deep learning, including convolutional neural networks, large language models, and reinforcement learning.
 
@@ -123,12 +124,52 @@ In this exercise we samples text from a GPT2 model, we instantiated a pre-traine
 
 `lenght of tokenized *Divina Commedia*:` 78825 tokens
 
-'ratio:` 0.42% of input *Divina Commedia*
+`ratio:` 0.42% of input *Divina Commedia*
 
 ### Exercise 3.1: Training a Text Classifier 
 In the exercise 3.1 we have to peruse the [text classification datasets on Hugging Face](https://huggingface.co/datasets?task_categories=task_categories:text-classification&sort=downloads) to choose a *moderately* sized dataset and use a LLM to train a classifier to solve the problem.
 
 **Note**: A good first baseline for this problem was to use an LLM *exclusively* as a feature extractor and then train a shallow model... and **that's what I've done!**
+
+### AG News Dataset
+I have chosen tu use **AG News dataset**, sourced from Hugging Face. The *AG News dataset* is a collection of news articles categorized into **four classes**
+
+### Dataset Specifications
+- **Number of Classes:** 4
+- **Classes:**
+  - 1: World
+  - 2: Sports
+  - 3: Business
+  - 4: Sci/Tech
+- **Total Number of Samples:** 120,000 train, 7,600 test
+
+### Data Visualization
+
+<p align="center">
+  <img src="lab2/images/tsne_train.png" height="400" alt="TSNE plot of train features">
+  <img src="lab2/images/tsne_val.png" height="400" alt="TSNE plot of test features">
+</p>
+  
+<p align="center">
+  <em>TSNE plot of train features, </em>
+  <em>TSNE plot of test features</em>
+</p>
+
+### Results
+<p align="center">
+  <img src="lab2/images/confusion_matrix.png" height="300" alt="Confusion Matrix for AG News Classification">
+</p>
+<p align="center">
+    <em>Confusion Matrix for AG News Classification</em>
+</p>
+
+| Metric                 | Value    |
+|------------------------|----------|
+| Validation Accuracy    | 0.9143   |
+| Validation Precision   | 0.9143   |
+| Validation Recall      | 0.9143   |
+| Validation F1 Score    | 0.9142   |
+
 
 ## Lab 3 - Reinforcement Learning
 
@@ -147,3 +188,4 @@ This repository was created by [your name]. If you have any questions or concern
 ## Acknowledgements
 
 We would like to thank Professor Andrew David Bagdanov for teaching the "Deep Learning Applications" course and providing guidance on these labs. We would also like to acnowledge the creators of the deep learning libraries used in this repository, including TensorFlow, PyTorch, and Hugging Face Transformers.
+</html>
