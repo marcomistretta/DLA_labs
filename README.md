@@ -142,6 +142,8 @@ I have chosen tu use **AG News dataset**, sourced from Hugging Face. The *AG New
   - 4: Sci/Tech
 - **Total Number of Samples:** 120,000 train, 7,600 test
 
+### Idea
+PARLARE DEL METODO LOGISTIC REGRESSION
 ### Data Visualization
 
 <p align="center">
