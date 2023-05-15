@@ -18,7 +18,7 @@ if __name__ == '__main__':
     # 10, 256
     # 20, 128
     batch_size = 256
-    lr = 0.004
+    lr = 0.0004
     epochs = 30
 
     depth = 10
