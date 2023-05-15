@@ -1,4 +1,3 @@
-<html>
 # Deep Learning Applications Labs
 This repository contains the source code for the three laboratory assignments completed during the **Deep Learning Applications** course taught by **Professor Andrew David Bagdanov** ([@bagdanov](https://github.com/bagdanov) on Github). The labs cover a variety of topics related to deep learning, including convolutional neural networks, large language models, and reinforcement learning.
 
@@ -157,35 +156,38 @@ I have chosen tu use **AG News dataset**, sourced from Hugging Face. The *AG New
 
 ### Results
 <p align="center">
-  <img src="lab2/images/confusion_matrix.png" height="300" alt="Confusion Matrix for AG News Classification">
-</p>
-<p align="center">
-    <em>Confusion Matrix for AG News Classification</em>
+  <img src="lab2/images/merged.png" height="300" alt="Confusion Matrix and Table metrics evaluation">
 </p>
 
-| Metric                 | Value    |
-|------------------------|----------|
-| Validation Accuracy    | 0.9143   |
-| Validation Precision   | 0.9143   |
-| Validation Recall      | 0.9143   |
-| Validation F1 Score    | 0.9142   |
+
 
 
 ## Lab 3 - Reinforcement Learning
 
-The third and final lab covers reinforcement learning, specifically deep Q learning and PPO. The source code for this lab can be found in the `lab3/` directory.
+The third and final lab covers reinforcement learning, specifically **Deep Q-learning** and . The source code for this lab can be found in the `lab3/` directory.
 
-## Getting Started
+### Code refactoring and Terminal Parameter and Hyperparameter Configuration
+I chose to reactor the original repository, so in the `lab3/` you can find:
+  - `main.py:` it is the main script, it starts the train or the evaluation of the agent
+  - `Parser.py:` contains the implementation of a Parser class, that allows the user to set hyperparameyters and executions parameters from terminal
+  - `DQLN.py:` contains the old implementation of the DQLN
+  - `Trainer.py:` contains the implementaion of a Trainer class, that set-up the environment and train/evaluate the agent
 
-To run the code in this repository, you will need to have Python 3 installed, as well as several deep learning libraries including TensorFlow, PyTorch, and Hugging Face Transformers.
+### PPO
+A Minimal PyTorch implementation of Proximal Policy Optimization (PPO) with clipped objective for Gymnasyum environments has been addes as requested. You can find the implementation in  `PPO.py` (source code on: ["nikhilbarhate99/PPO-PyTorch"](https://github.com/nikhilbarhate99/PPO-PyTorch))
+  
+ 
 
-To get started, clone this repository to your local machine and navigate to the directory of the lab you wish to run. From there, you can run the code using the appropriate commands.
+### Notes
+  
+To run the code in this repository, you will need to have Python 3 installed, as well as several deep learning libraries including PyTorch, and Hugging Face Transformers.
+
+To get started, clone this repository to your local machine and navigate to the directory of the lab you wish to run. From there, you can run each exercise seperately
 
 ## Contributors
 
-This repository was created by [your name]. If you have any questions or concerns, please contact [your email].
+This repository was created by **Marco Mistretta**. If you have any questions or concerns, please contact [marco.mistretta@stud.unifi.it].
 
-## Acknowledgements
+### Acknowledgements
 
-We would like to thank Professor Andrew David Bagdanov for teaching the "Deep Learning Applications" course and providing guidance on these labs. We would also like to acnowledge the creators of the deep learning libraries used in this repository, including TensorFlow, PyTorch, and Hugging Face Transformers.
-</html>
+We would like to thank Professor Andrew David Bagdanov for teaching the "Deep Learning Applications" course and providing guidance on these labs
