@@ -17,11 +17,11 @@ if __name__ == '__main__':
     # 5, 512
     # 10, 256
     # 20, 128
-    batch_size = 512
+    batch_size = 256
     lr = 0.004
     epochs = 30
 
-    depth = 5
+    depth = 10
     residual = True
     writer = create_summary_writer(lr, batch_size, epochs, folder="deep_cnns_work_worst", mode="cnn", depth=depth, residual=residual)
     transform = transforms.Compose([
