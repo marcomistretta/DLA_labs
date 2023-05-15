@@ -12,22 +12,58 @@ In `trainer.py` has been implemented a **Trainer** Class. **Trainer** provides a
 In the `models.py` have been implemented the three models used in this Laboratory: the **MLP**, the **CNN** and the **ResCNN**.
 Tensorboard logs can be found in `lab1/model` with the saved models.
 The results show the performance of the best *MLP* trained, the one with hidden-layer sizes: **[128, 64, 10]**
-![MLP Train Loss](lab1/images/mlp_train_loss.png) ![MLP Test Loss](lab1/images/mlp_test_loss.png) ![MLP Test Accuracy](lab1/images/mlp_test_accuracy.png)
+
+<p align="center">
+  <img src="lab1/images/mlp_train_loss.png" width="300" alt="MLP Train Loss">
+  <img src="lab1/images/mlp_test_loss.png" width="300" alt="MLP Test Loss">
+  <img src="lab1/images/mlp_test_accuracy.png" width="300" alt="MLP Test Accuracy">
+</p>
+
+<p align="center">
+  <em>MLP Train Loss, </em>
+  <em>MLP Test Loss,  </em>
+  <em>MLP Test Accuracy</em>
+</p>
+
 ### Exercise 1.2: Rinse and Repeat
 In the exercise 1.2 we have to repeat the verification we did in exercise 1.1, but with **Convolutional** Neural Networks, showing that **deeper** CNNs *without* residual connections do not always work better whereas **even deeper** ones *with* residual connections.
 This time we use *CIFAR10*, since MNIST is *very* easy.
-#### Implementation and Results
+#### Implementation and Results 
 The same *Trainer* of *MLP* has benn used to train the *CNNs* and the *ResCNNs*. These time has been evaluted differents **depths** to validate the hypothesis.
-For the **CNN** has been evaluated: **1, 5, 10, 20, 25 layers deth**
-For the **ResCNN** has been evaluted: **1, 5, 10, 20 layers depth**
+For the **CNN** has been evaluated: **1, 5, 10 layers deth**
+For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
+*Legend:* **darker is deeper!**
 ##### CNN Results
-![CNN Train Loss](lab1/cnn_train_loss) ![CNN Test Loss](lab1/cnn_test_loss) ![CNN Test Accuracy](lab1/cnn_test_accuracy)
+
+<p align="center">
+  <img src="lab1/images/cnn_train_loss.png" width="300" alt="CNN Train Loss">
+  <img src="lab1/images/cnn_test_loss.png" width="300" alt="CNN Test Loss">
+  <img src="lab1/images/cnn_test_accuracy.png" width="300" alt="CNN Test Accuracy">
+</p>
+
+<p align="center">
+  <em>ResCNN Train Loss, </em>
+  <em>ResCNN Test Loss,  </em>
+  <em>ResCNN Test Accuracy</em>
+</p>
 
 Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-XX** performs better than **CNN-depth-YY** and **CNN-depth-ZZ**.
 
 ##### ResCNN Results
 
 ![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
+<p align="center">
+  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Train Loss">
+  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Test Loss">
+  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Test Accuracy">
+</p>
+
+<p align="center">
+  <em>CNN Train Loss, </em>
+  <em>CNN Test Loss,  </em>
+  <em>CNN Test Accuracy</em>
+</p>
+
 
 This time, by observing the images, it can be seen that **increasing depth always improves ResCNN**.
 
@@ -50,21 +86,49 @@ Instead of implementing from scratch the **Class Activation Maps** mechanism, I 
 #### Results
 The original code required few modifications to work with my custom ResCNN. I had only to change 
 *Tranforms pipeline*. 
-![CIFAR10](image_path)   ![TruckFromInternet](image_path)
-![CAM CIFAR10](image_path)   ![CAM TruckFromInternet](image_path)
-Above we can see CAM resulting on a **Ship from CIFAR10**, and onn **Truck image taken from the internet**.
 
+<p align="center">
+  <img src="lab1/images/cifar_ship.jpg" height="150" alt="CIFAR10 Ship">
+  <img src="lab1/images/CAM_cifar_ship_idx18_probs0.97495395.jpg" height="150" alt="CAM CIFAR10 Ship">
+  <img src="lab1/images/hd_truck.jpg" height="150" alt="Truck from internet">
+  <img src="lab1/images/CAM_hd_truck_probs0.99809355.jpg" height="150" alt="CAM Truck from internet">
+</p>
+
+<p align="center">
+  <em>CIFAR10 Ship, </em>
+  <em>CAM CIFAR10 Ship,  </em>
+  <em>Truck from internet,  </em>
+  <em>CAM Truck from internet</em>
+</p>
+
+Above we can see **CAMs** resulting on a **Ship from CIFAR10**, and on **Truck image taken from the internet**.
 **Ship from CIFAR10** prediction logits: 0.975 &#8594; ship, 0.022 &#8594; truck, 0.001 &#8594; else
 **Truck image taken from the internet** prediction logits: 0.998 &#8594; ship, 0.001 &#8594; automobile, 0.001 &#8594; else
 
 
 ## Lab 2 - Large Language Models
-
 The second lab explores large language models using the Hugging Face Transformers library. The source code for this lab can be found in the `lab2/` directory.
 
 ### Exercise 1: Warming up
 In this first exercise we trained a *small* autoregressive GPT model for character generation (the one used by **Karpathy** in his video) to generate text in the style of *Dante Aligheri*, using [this file](https://archive.org/stream/ladivinacommedia00997gut/1ddcd09.txt), which contains the entire text of Dante's Inferno.
-#### Results
+
+### Exercise 2: Generating Text
+In this exercise we samples text from a GPT2 model, we instantiated a pre-trained `GPT2LMHeadModel` and use the [`generate()`](https://huggingface.co/docs/transformers/v4.27.2/en/main_classes/text_generation#transformers.GenerationMixin.generate) method to generate text from a prompt.
+
+`prompt input:` Halfway down the road of life... 
+
+`output:` Halfway down the road of life, I feel like this is pretty serious stuff. I guess I'd say it would be pretty serious if it were made so many years before someone decided they were ready to make the kind of movie it would be like
+
+`number of characters of *Divina Commedia*:` 186001 characters
+
+`lenght of tokenized *Divina Commedia*:` 78825 tokens
+
+'ratio:` 0.42% of input *Divina Commedia*
+
+### Exercise 3.1: Training a Text Classifier 
+In the exercise 3.1 we have to peruse the [text classification datasets on Hugging Face](https://huggingface.co/datasets?task_categories=task_categories:text-classification&sort=downloads) to choose a *moderately* sized dataset and use a LLM to train a classifier to solve the problem.
+
+**Note**: A good first baseline for this problem was to use an LLM *exclusively* as a feature extractor and then train a shallow model... and **that's what I've done!**
 
 ## Lab 3 - Reinforcement Learning
 
