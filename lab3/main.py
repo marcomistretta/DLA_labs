@@ -5,7 +5,7 @@ from TrainerRL import TrainerRL
 
 current_time = datetime.now().strftime('%H_%M_%S_%d_%m_%y')
 # xxx nota bene, per semplicità non ho messo method in Parser, ma lo ho lasciato qui
-method = "dqln"  # xxx method can be "dqln" or "ppo
+method = "ppo"  # xxx method can be "dqln" or "ppo"
 name = method + "/" + method + "_" + current_time
 
 writer_path = "runs/" + name
