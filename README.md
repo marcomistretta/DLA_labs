@@ -35,9 +35,8 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 *Legend:* **darker is deeper!**
 ##### CNN Results
 **Legends:**
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) layers-size 1, bs 1024, lr 4e-4
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) layers-size 1, bs 1024, lr 4e-4
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) layers-size 1, bs 1024, lr 4e-4
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) 56 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) 20 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 <p align="center">
   <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
@@ -51,7 +50,7 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
   <em>CNN Test Accuracy (ep/acc)</em>
 </p>
 
-Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-5** performs better than **CNN-depth-10** and **CNN-depth-1**. **CNN-depth-10** **overfits** from epoch 15. Reducing learning rate would help CNN-depth-10 but this wasn't the objective of the ecercise. 
+Looking at the images, considering that I didn't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-20-layers** train smoother and performs better than **CNN-56-layers**. 
 
 ##### ResCNN Results
 **Legends:**
