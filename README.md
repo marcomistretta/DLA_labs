@@ -55,11 +55,10 @@ Looking at the images, considering that I didn't achieved convergence in the tra
 - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) ResCNN 21 layers, 30 epochs, lr 4e-4 Adam optimzer
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) ResCNN 11 layers, 30 epochs, lr 4e-4 Adam optimzer
 
-![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
 <p align="center">
-  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Train Loss">
-  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Test Loss">
-  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Test Accuracy">
+  <img src="lab1/images/new_res_train_loss.png" width="200" alt="ResCNN Train Loss">
+  <img src="lab1/images/new_res_test_loss.png" width="200" alt="ResCNN Test Loss">
+  <img src="lab1/images/new_res_test_accuracy.png" width="200" alt="ResCNN Test Accuracy">
 </p>
 
 <p align="center">
