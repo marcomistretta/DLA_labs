@@ -79,7 +79,7 @@ Different layers size has been compared, all of them show the same results. The 
 **Legends:**
 - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) **ResCNNs** 10/20/25/50 layers (darker is deeper)
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) **CNNs** 10/20/25/50 layers (darker is deeper)
-- 
+
 <p align="center">
   <img src="lab1/images/grad_magnitudes.png" width="600" alt="grad_magnitudes.png">
 </p>
