@@ -39,13 +39,11 @@ For the **ResCNN** has been evaluted: **10, 20**
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) CNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 <p align="center">
-  <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
-  <img src="lab1/images/cnn_test_loss.png" width="200" alt="CNN Test Loss">
-  <img src="lab1/images/cnn_test_accuracy.png" width="200" alt="CNN Test Accuracy">
+  <img src="lab1/images/new_cnn_test_loss.png" width="200" alt="CNN Test Loss">
+  <img src="lab1/images/new_cnn_test_accuracy.png" width="200" alt="CNN Test Accuracy">
 </p>
 
 <p align="center">
-  <em>from left to right: CNN Train Loss (ep/loss), </em>
   <em>CNN Test Loss (ep/loss),  </em>
   <em>CNN Test Accuracy (ep/acc)</em>
 </p>
