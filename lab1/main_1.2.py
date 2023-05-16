@@ -16,14 +16,15 @@ if __name__ == '__main__':
     # 1, 1024
     # 5, 512
     # 10, 256
-    # 20, 128
-    batch_size = 256
+    batch_size = 512
     lr = 0.0004
     epochs = 30
 
-    depth = 10
+    depth = 17  # for ResCNN should be odd
     residual = True
-    writer = create_summary_writer(lr, batch_size, epochs, folder="deep_cnns_work_worst", mode="cnn", depth=depth, residual=residual)
+    # writer = create_summary_writer(lr, batch_size, epochs, folder="deep_cnns_work_worst", mode="cnn", depth=depth, residual=residual)
+    writer = create_summary_writer(lr, batch_size, epochs, folder="ex_confronto", mode="cnn", depth=depth,
+                                   residual=residual)
     transform = transforms.Compose([
         transforms.ToTensor(),
         # transforms.Normalize((0.1307,), (0.3081,))
@@ -40,7 +41,10 @@ if __name__ == '__main__':
     if residual:
         model = ResCNN(depth=depth).to(device)
     else:
-        model = CNN(depth=depth).to(device)
+        if depth % 2 == 0:
+            print("depth should be odd")
+            depth = depth + 1
+        model = CNN(depth=int((depth - 1) / 2)).to(device)
 
     optimizer = optim.Adam(model.parameters(), lr=0.0001)
     criterion = nn.CrossEntropyLoss()
