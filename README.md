@@ -11,7 +11,7 @@ The source code for this lab can be found in the `lab1/` directory.
 In `trainer.py` has been implemented a **Trainer** Class. **Trainer** provides a `train()` method and a `test()` method that can be used not only for MLP, but for convolutional, residual or not, neural networks.
 In the `models.py` have been implemented the three models used in this Laboratory: the **MLP**, the **CNN** and the **ResCNN**.
 Tensorboard logs can be found in `lab1/model` with the saved models.
-The results show the performance of the best *MLP* trained, the one with hidden-layer sizes: **[128, 64, 10]**
+The results show the performance of the best *MLP* trained, the one with hidden-layer sizes **[128, 64, 10]**, 15 epochs, Adam with lr 1e-4, batch size 2048
 
 <p align="center">
   <img src="lab1/images/mlp_train_loss.png" width="200" alt="MLP Train Loss">
@@ -33,14 +33,14 @@ The same *Trainer* of *MLP* has benn used to train the *CNNs* and the *ResCNNs*.
 For the **CNN** has been evaluated: **20, 56 layers deth**
 For the **ResCNN** has been evaluted: **10, 20**
 *Legend:* **darker is deeper!**
-##### CNN Results
+#### CNN Results
 **Legends:**
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) CNN 56 layers, 30 epochs, lr 4e-4 Adam optimzer
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) CNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 <p align="center">
-  <img src="lab1/images/new_cnn_test_loss.png" width="200" alt="CNN Test Loss">
-  <img src="lab1/images/new_cnn_test_accuracy.png" width="200" alt="CNN Test Accuracy">
+  <img src="lab1/images/new_cnn_test_loss.png" width="300" alt="CNN Test Loss">
+  <img src="lab1/images/new_cnn_test_accuracy.png" width="300" alt="CNN Test Accuracy">
 </p>
 
 <p align="center">
@@ -50,17 +50,10 @@ For the **ResCNN** has been evaluted: **10, 20**
 
 Looking at the images, considering that I didn't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-20-layers** train smoother and performs better than **CNN-56-layers**. Note that CNN-56-layers is overfitting from half the train
 
-##### ResCNN Results
+#### ResCNN Results
 **Legends:**
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) ResCNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) ResCNN 10 layers, 30 epochs, lr 4e-4 Adam optimzer
-- 
-**Legends:**
-```diff
-- layers-size 5, bs 512, lr 1e-4
-+ layers-size 5, bs 512, lr 1e-4
-! layers-size 5, bs 512, lr 1e-4
-```
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) ResCNN 21 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) ResCNN 11 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 ![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
 <p align="center">
