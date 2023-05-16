@@ -2,7 +2,6 @@ from transformers import GPT2Tokenizer, pipeline
 
 train_txt = "dante_train.txt"
 
-# xxx my comment
 with open(train_txt, 'r', encoding='utf-8') as f:
     text = f.read()
 

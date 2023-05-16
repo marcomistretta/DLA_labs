@@ -27,7 +27,6 @@ writer = SummaryWriter("./results/" + model_name)
 save_model = True
 
 # wget https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
-# xxx my comment
 # with open('input.txt', 'r', encoding='utf-8') as f:
 #     text = f.read()
 with open(train_txt, 'r', encoding='utf-8') as f:
@@ -249,7 +248,6 @@ finally:
 print("Text generation...")
 context = torch.zeros((1, 1), dtype=torch.long, device=device)
 print(decode(m.generate(context, max_new_tokens=500)[0].tolist()))
-# xxx my cooment
 # open('more.txt', 'w').write(decode(m.generate(context, max_new_tokens=10000)[0].tolist()))
 
 with open(output_txt, 'w') as f:

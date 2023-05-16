@@ -12,11 +12,6 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 
-# todo check if cuda is available
-# todo add save embedding
-# todo add log info?
-# todo tsne plot
-
 labels = ["World", "Sports", "Business", "Science/Tech"]
 writer = SummaryWriter("./runs/lab2_3_1-ovr")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

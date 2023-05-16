@@ -25,3 +25,12 @@ lab1/data/
 /lab1/model/mlp/mlp-layers[128-64-10]-ep20-lr0.001-bs4096.pt
 /lab1/model/mlp/mlp-layers[128-64-10]-ep30-lr0.0001-bs2048.pt
 /lab1/model/resnet_to_convergence/cnn-ep5-lr0.004-bs64-depth25-residual.pt
+/lab1/model/mlp/mlp-layers[128-64-10]-ep30-lr0.0001-bs2048.pt
+/lab1/model/mlp/mlp-layers[128-64-10]-ep20-lr0.001-bs4096.pt
+/lab1/model/ex_confronto/cnn-ep30-lr0.0004-bs1024-depth20-not-residual.pt
+/lab1/model/ex_confronto/cnn-ep30-lr0.0004-bs512-depth20-not-residual.pt
+/lab1/model/ex_confronto/cnn-ep30-lr0.0004-bs256-depth21-residual.pt
+/lab1/model/ex_confronto/cnn-ep30-lr0.0004-bs224-depth21-residual.pt
+/lab1/model/deep_cnns_work_worst/cnn-ep30-lr0.0004-bs256-depth10-residual.pt
+/lab1/model/deep_cnns_work_worst/cnn-ep30-lr0.004-bs512-depth5-residual.pt
+/lab1/model/deep_cnns_work_worst/cnn-ep30-lr0.004-bs256-depth10-residual.pt
