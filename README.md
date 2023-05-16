@@ -14,9 +14,9 @@ Tensorboard logs can be found in `lab1/model` with the saved models.
 The results show the performance of the best *MLP* trained, the one with hidden-layer sizes: **[128, 64, 10]**
 
 <p align="center">
-  <img src="lab1/images/mlp_train_loss.png" width="300" alt="MLP Train Loss">
-  <img src="lab1/images/mlp_test_loss.png" width="300" alt="MLP Test Loss">
-  <img src="lab1/images/mlp_test_accuracy.png" width="300" alt="MLP Test Accuracy">
+  <img src="lab1/images/mlp_train_loss.png" width="200" alt="MLP Train Loss">
+  <img src="lab1/images/mlp_test_loss.png" width="200" alt="MLP Test Loss">
+  <img src="lab1/images/mlp_test_accuracy.png" width="200" alt="MLP Test Accuracy">
 </p>
 
 <p align="center">
@@ -42,9 +42,9 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 ```
 
 <p align="center">
-  <img src="lab1/images/cnn_train_loss.png" width="300" alt="CNN Train Loss">
-  <img src="lab1/images/cnn_test_loss.png" width="300" alt="CNN Test Loss">
-  <img src="lab1/images/cnn_test_accuracy.png" width="300" alt="CNN Test Accuracy">
+  <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
+  <img src="lab1/images/cnn_test_loss.png" width="200" alt="CNN Test Loss">
+  <img src="lab1/images/cnn_test_accuracy.png" width="200" alt="CNN Test Accuracy">
 </p>
 
 <p align="center">
