@@ -76,8 +76,12 @@ In the exercise 2.1 we have to use our CNNs (with and without residual connectio
 So i write a simple trainining loop where I train simultaneously a CNN and a ResCNN with the same layers depth for just 150 batch iterations. During the training I add to the Summary writer the **mean of the absolute values of the gradients** passing through the networks during backpropagation in the last layer of the two models, **the dense layer**.
 Different layers size has been compared, all of them show the same results. The gradient magnitudes of the CNN tends to zero, showing vanishing gradient problem, instead the ResNet don't suffer of vanishing, neither exploding, gradients, even with the biggest layers depth evaluated.
 
-![WhyResIsBetter](image_path)
-
+<p align="center">
+  <img src="lab1/images/grad_magnitudes.png" width="600" alt="grad_magnitudes.png">
+</p>
+<p align="center">
+  <em>Mean of the absolute values of the gradients during backprop in the dense layer for the first 150 batch iterations</em>
+ </p>
 ### Extra: Exercise 2.3: *Explain* the predictions of a CNN
 The exercise 2.3 ask to use the CNN model we trained in Exercise 1.2 and implement [*Class Activation Maps*](http://cnnlocalization.csail.mit.edu/#:~:text=A%20class%20activation%20map%20for,decision%20made%20by%20the%20CNN.):
 
