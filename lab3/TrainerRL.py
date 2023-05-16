@@ -28,7 +28,7 @@ def normalize(state: np.ndarray) -> np.ndarray:
 
 class TrainerRL:
     def __init__(self, method, writer_path, args):
-        self.max_ep_len = 200
+        self.max_ep_len = 100
         self.args = args
 
         # environment attributes
@@ -196,7 +196,6 @@ class TrainerRL:
         print('Testing done!')
 
     def init_ppo(self):
-        # todo try to optimize hyperparameters
         K_epochs = 80  # update policy for K epochs in one PPO update
         eps_clip = 0.2  # clip parameter for PPO
         gamma = 0.99  # discount factor
@@ -403,9 +402,8 @@ class TrainerRL:
                 state_observation, reward, terminated, truncated, info = self.env.step(action.item())
                 done = terminated or truncated
                 steps += 1
-                if steps >= self.max_ep_len:
+                if truncated:
                     not_terminated += 1
-                    truncated = True
 
                 if terminated or truncated:
                     if not truncated and reward == 500:
