@@ -20,7 +20,7 @@ The results show the performance of the best *MLP* trained, the one with hidden-
 </p>
 
 <p align="center">
-  <em>MLP Train Loss, </em>
+  <em>from left to right: MLP Train Loss, </em>
   <em>MLP Test Loss,  </em>
   <em>MLP Test Accuracy</em>
 </p>
@@ -34,12 +34,13 @@ For the **CNN** has been evaluated: **1, 5, 10 layers deth**
 For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 *Legend:* **darker is deeper!**
 ##### CNN Results
-Legend:
+**Legends:**
+```diff
+- layers-size 5, bs 512, lr 1e-4
++ layers-size 5, bs 512, lr 1e-4
+! layers-size 5, bs 512, lr 1e-4
+```
 
-- Yellow: CNN Layers - Size 1
-- Orange: CNN Layers - Size 5
-- Red: CNN Layers - Size 10
-- 
 <p align="center">
   <img src="lab1/images/cnn_train_loss.png" width="300" alt="CNN Train Loss">
   <img src="lab1/images/cnn_test_loss.png" width="300" alt="CNN Test Loss">
@@ -47,20 +48,21 @@ Legend:
 </p>
 
 <p align="center">
-  <em>CNN Train Loss, </em>
-  <em>CNN Test Loss,  </em>
-  <em>CNN Test Accuracy</em>
+  <em>from left to right: CNN Train Loss (ep/loss), </em>
+  <em>CNN Test Loss (ep/loss),  </em>
+  <em>CNN Test Accuracy (ep/acc)</em>
 </p>
 
 Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-XX** performs better than **CNN-depth-YY** and **CNN-depth-ZZ**.
 
 ##### ResCNN Results
-Legend:
+**Legends:**
+```diff
+- layers-size 5, bs 512, lr 1e-4
++ layers-size 5, bs 512, lr 1e-4
+! layers-size 5, bs 512, lr 1e-4
+```
 
-- Yellow: ResCNN Layers - Size 1
-- Orange: ResCNN Layers - Size 5
-- Red: ResCNN Layers - Size 10
-- 
 ![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
 <p align="center">
   <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Train Loss">
@@ -69,9 +71,9 @@ Legend:
 </p>
 
 <p align="center">
-  <em>ResCNN Train Loss, </em>
-  <em>ResCNN Test Loss,  </em>
-  <em>ResCNN Test Accuracy</em>
+  <em>from left to right: ResCNN Train Loss (ep/loss), </em>
+  <em>ResCNN Test Loss (ep/loss),  </em>
+  <em>ResCNN Test Accuracy (ep/acc)</em>
 </p>
 
 
@@ -105,7 +107,7 @@ The original code required few modifications to work with my custom ResCNN. I ha
 </p>
 
 <p align="center">
-  <em>CIFAR10 Ship, </em>
+  <em>from left to right: CIFAR10 Ship, </em>
   <em>CAM CIFAR10 Ship,  </em>
   <em>Truck from internet,  </em>
   <em>CAM Truck from internet</em>
@@ -153,7 +155,7 @@ I have chosen tu use **AG News dataset**, sourced from Hugging Face. The *AG New
 - **Total Number of Samples:** 120,000 train, 7,600 test
 
 ### Idea
-PARLARE DEL METODO LOGISTIC REGRESSION
+I choose to use **DistillBert** only as a feature extractor on the AG News Dataset, and train a **OVR-LOgistic-Regression** on these embeddings.
 ### Data Visualization
 
 <p align="center">
@@ -165,6 +167,9 @@ PARLARE DEL METODO LOGISTIC REGRESSION
   <em>TSNE plot of train features, </em>
   <em>TSNE plot of test features</em>
 </p>
+
+It is incredible to see how well the LLM separates the emebedding representation of the 4 different classes.
+This allows the simplest Logistic Regression to work weel even on a benchmark text classification task.
 
 ### Results
 <p align="center">
