@@ -30,13 +30,13 @@ In the exercise 1.2 we have to repeat the verification we did in exercise 1.1, b
 This time we use *CIFAR10*, since MNIST is *very* easy.
 #### Implementation and Results 
 The same *Trainer* of *MLP* has benn used to train the *CNNs* and the *ResCNNs*. These time has been evaluted differents **depths** to validate the hypothesis.
-For the **CNN** has been evaluated: **1, 5, 10 layers deth**
-For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
+For the **CNN** has been evaluated: **20, 56 layers deth**
+For the **ResCNN** has been evaluted: **10, 20**
 *Legend:* **darker is deeper!**
 ##### CNN Results
 **Legends:**
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) 56 layers, 30 epochs, lr 4e-4 Adam optimzer
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 20 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) CNN 56 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) CNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 <p align="center">
   <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
@@ -50,9 +50,13 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
   <em>CNN Test Accuracy (ep/acc)</em>
 </p>
 
-Looking at the images, considering that I didn't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-20-layers** train smoother and performs better than **CNN-56-layers**. 
+Looking at the images, considering that I didn't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-20-layers** train smoother and performs better than **CNN-56-layers**. Note that CNN-56-layers is overfitting from half the train
 
 ##### ResCNN Results
+**Legends:**
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) ResCNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) ResCNN 10 layers, 30 epochs, lr 4e-4 Adam optimzer
+- 
 **Legends:**
 ```diff
 - layers-size 5, bs 512, lr 1e-4
