@@ -53,7 +53,7 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
   <em>CNN Test Accuracy (ep/acc)</em>
 </p>
 
-Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-XX** performs better than **CNN-depth-YY** and **CNN-depth-ZZ**.
+Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-5** performs better than **CNN-depth-10** and **CNN-depth-1**. **CNN-depth-10** **overfits** from epoch 15. Reducing learning rate would help CNN-depth-10 but this wasn't the objective of the ecercise. 
 
 ##### ResCNN Results
 **Legends:**
