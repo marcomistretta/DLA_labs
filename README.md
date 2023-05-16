@@ -34,7 +34,12 @@ For the **CNN** has been evaluated: **1, 5, 10 layers deth**
 For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 *Legend:* **darker is deeper!**
 ##### CNN Results
+Legend:
 
+- Yellow: CNN Layers - Size 1
+- Orange: CNN Layers - Size 5
+- Red: CNN Layers - Size 10
+- 
 <p align="center">
   <img src="lab1/images/cnn_train_loss.png" width="300" alt="CNN Train Loss">
   <img src="lab1/images/cnn_test_loss.png" width="300" alt="CNN Test Loss">
@@ -50,7 +55,12 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-XX** performs better than **CNN-depth-YY** and **CNN-depth-ZZ**.
 
 ##### ResCNN Results
+Legend:
 
+- Yellow: ResCNN Layers - Size 1
+- Orange: ResCNN Layers - Size 5
+- Red: ResCNN Layers - Size 10
+- 
 ![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
 <p align="center">
   <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Train Loss">
