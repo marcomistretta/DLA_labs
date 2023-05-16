@@ -11,7 +11,7 @@ The source code for this lab can be found in the `lab1/` directory.
 In `trainer.py` has been implemented a **Trainer** Class. **Trainer** provides a `train()` method and a `test()` method that can be used not only for MLP, but for convolutional, residual or not, neural networks.
 In the `models.py` have been implemented the three models used in this Laboratory: the **MLP**, the **CNN** and the **ResCNN**.
 Tensorboard logs can be found in `lab1/model` with the saved models.
-The results show the performance of the best *MLP* trained, the one with hidden-layer sizes: **[128, 64, 10]**
+The results show the performance of the best *MLP* trained, the one with hidden-layer sizes **[128, 64, 10]**, 15 epochs, Adam with lr 1e-4, batch size 2048
 
 <p align="center">
   <img src="lab1/images/mlp_train_loss.png" width="200" alt="MLP Train Loss">
