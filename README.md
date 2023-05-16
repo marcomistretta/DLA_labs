@@ -35,11 +35,9 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 *Legend:* **darker is deeper!**
 ##### CNN Results
 **Legends:**
-```diff
-- layers-size 1, bs 1024, lr 4e-4
-+ layers-size 6, bs 512, lr 4e-4
-! layers-size 10, bs 256, lr e-4
-```
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) layers-size 1, bs 1024, lr 4e-4
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) layers-size 1, bs 1024, lr 4e-4
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) layers-size 1, bs 1024, lr 4e-4
 
 <p align="center">
   <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
