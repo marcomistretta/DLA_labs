@@ -36,15 +36,15 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 ##### CNN Results
 
 <p align="center">
-  <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
-  <img src="lab1/images/cnn_test_loss.png" width="200" alt="CNN Test Loss">
-  <img src="lab1/images/cnn_test_accuracy.png" width="200" alt="CNN Test Accuracy">
+  <img src="lab1/images/cnn_train_loss.png" width="300" alt="CNN Train Loss">
+  <img src="lab1/images/cnn_test_loss.png" width="300" alt="CNN Test Loss">
+  <img src="lab1/images/cnn_test_accuracy.png" width="300" alt="CNN Test Accuracy">
 </p>
 
 <p align="center">
-  <em>ResCNN Train Loss, </em>
-  <em>ResCNN Test Loss,  </em>
-  <em>ResCNN Test Accuracy</em>
+  <em>CNN Train Loss, </em>
+  <em>CNN Test Loss,  </em>
+  <em>CNN Test Accuracy</em>
 </p>
 
 Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-XX** performs better than **CNN-depth-YY** and **CNN-depth-ZZ**.
@@ -53,15 +53,15 @@ Looking at the images, considering that I did't achieved convergence in the trai
 
 ![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
 <p align="center">
-  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Train Loss">
-  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Test Loss">
-  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Test Accuracy">
+  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Train Loss">
+  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Test Loss">
+  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Test Accuracy">
 </p>
 
 <p align="center">
-  <em>CNN Train Loss, </em>
-  <em>CNN Test Loss,  </em>
-  <em>CNN Test Accuracy</em>
+  <em>ResCNN Train Loss, </em>
+  <em>ResCNN Test Loss,  </em>
+  <em>ResCNN Test Accuracy</em>
 </p>
 
 
