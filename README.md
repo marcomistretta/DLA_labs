@@ -36,9 +36,9 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 ##### CNN Results
 **Legends:**
 ```diff
-- layers-size 5, bs 512, lr 1e-4
-+ layers-size 5, bs 512, lr 1e-4
-! layers-size 5, bs 512, lr 1e-4
+- layers-size 1, bs 1024, lr 4e-4
++ layers-size 6, bs 512, lr 4e-4
+! layers-size 10, bs 256, lr e-4
 ```
 
 <p align="center">
