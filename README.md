@@ -20,9 +20,9 @@ The results show the performance of the best *MLP* trained, the one with hidden-
 </p>
 
 <p align="center">
-  <em>from left to right: MLP Train Loss, </em>
-  <em>MLP Test Loss,  </em>
-  <em>MLP Test Accuracy</em>
+  <em>from left to right: MLP Train Loss (ep/loss), </em>
+  <em>MLP Test Loss (ep/loss),  </em>
+  <em>MLP Test Accuracy (ep/acc)</em>
 </p>
 
 ### Exercise 1.2: Rinse and Repeat
