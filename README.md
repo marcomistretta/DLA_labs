@@ -36,7 +36,7 @@ For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
 ##### CNN Results
 **Legends:**
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) 56 layers, 30 epochs, lr 4e-4 Adam optimzer
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) 20 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) 20 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 <p align="center">
   <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
