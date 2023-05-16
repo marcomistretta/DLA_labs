@@ -16,11 +16,11 @@ if __name__ == '__main__':
     # 1, 1024
     # 5, 512
     # 10, 256
-    batch_size = 512
+    batch_size = 224
     lr = 0.0004
     epochs = 30
 
-    depth = 17  # for ResCNN should be odd
+    depth = 21  # for ResCNN should be odd
     residual = True
     # writer = create_summary_writer(lr, batch_size, epochs, folder="deep_cnns_work_worst", mode="cnn", depth=depth, residual=residual)
     writer = create_summary_writer(lr, batch_size, epochs, folder="ex_confronto", mode="cnn", depth=depth,
