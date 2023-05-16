@@ -1,4 +1,3 @@
-<html>
 # Deep Learning Applications Labs
 This repository contains the source code for the three laboratory assignments completed during the **Deep Learning Applications** course taught by **Professor Andrew David Bagdanov** ([@bagdanov](https://github.com/bagdanov) on Github). The labs cover a variety of topics related to deep learning, including convolutional neural networks, large language models, and reinforcement learning.
 
@@ -15,15 +14,15 @@ Tensorboard logs can be found in `lab1/model` with the saved models.
 The results show the performance of the best *MLP* trained, the one with hidden-layer sizes: **[128, 64, 10]**
 
 <p align="center">
-  <img src="lab1/images/mlp_train_loss.png" width="300" alt="MLP Train Loss">
-  <img src="lab1/images/mlp_test_loss.png" width="300" alt="MLP Test Loss">
-  <img src="lab1/images/mlp_test_accuracy.png" width="300" alt="MLP Test Accuracy">
+  <img src="lab1/images/mlp_train_loss.png" width="200" alt="MLP Train Loss">
+  <img src="lab1/images/mlp_test_loss.png" width="200" alt="MLP Test Loss">
+  <img src="lab1/images/mlp_test_accuracy.png" width="200" alt="MLP Test Accuracy">
 </p>
 
 <p align="center">
-  <em>MLP Train Loss, </em>
-  <em>MLP Test Loss,  </em>
-  <em>MLP Test Accuracy</em>
+  <em>from left to right: MLP Train Loss (ep/loss), </em>
+  <em>MLP Test Loss (ep/loss),  </em>
+  <em>MLP Test Accuracy (ep/acc)</em>
 </p>
 
 ### Exercise 1.2: Rinse and Repeat
@@ -31,38 +30,51 @@ In the exercise 1.2 we have to repeat the verification we did in exercise 1.1, b
 This time we use *CIFAR10*, since MNIST is *very* easy.
 #### Implementation and Results 
 The same *Trainer* of *MLP* has benn used to train the *CNNs* and the *ResCNNs*. These time has been evaluted differents **depths** to validate the hypothesis.
-For the **CNN** has been evaluated: **1, 5, 10 layers deth**
-For the **ResCNN** has been evaluted: **1, 5, 10 layers depth**
+For the **CNN** has been evaluated: **20, 56 layers deth**
+For the **ResCNN** has been evaluted: **10, 20**
 *Legend:* **darker is deeper!**
 ##### CNN Results
+**Legends:**
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) CNN 56 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) CNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
 
 <p align="center">
-  <img src="lab1/images/cnn_train_loss.png" width="300" alt="CNN Train Loss">
-  <img src="lab1/images/cnn_test_loss.png" width="300" alt="CNN Test Loss">
-  <img src="lab1/images/cnn_test_accuracy.png" width="300" alt="CNN Test Accuracy">
+  <img src="lab1/images/cnn_train_loss.png" width="200" alt="CNN Train Loss">
+  <img src="lab1/images/cnn_test_loss.png" width="200" alt="CNN Test Loss">
+  <img src="lab1/images/cnn_test_accuracy.png" width="200" alt="CNN Test Accuracy">
 </p>
 
 <p align="center">
-  <em>ResCNN Train Loss, </em>
-  <em>ResCNN Test Loss,  </em>
-  <em>ResCNN Test Accuracy</em>
+  <em>from left to right: CNN Train Loss (ep/loss), </em>
+  <em>CNN Test Loss (ep/loss),  </em>
+  <em>CNN Test Accuracy (ep/acc)</em>
 </p>
 
-Looking at the images, considering that I did't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-depth-XX** performs better than **CNN-depth-YY** and **CNN-depth-ZZ**.
+Looking at the images, considering that I didn't achieved convergence in the training process for lack of time, it can be observed that,  CNN does not always benefit from an increase in depth. In fact, **CNN-20-layers** train smoother and performs better than **CNN-56-layers**. Note that CNN-56-layers is overfitting from half the train
 
 ##### ResCNN Results
+**Legends:**
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) ResCNN 20 layers, 30 epochs, lr 4e-4 Adam optimzer
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) ResCNN 10 layers, 30 epochs, lr 4e-4 Adam optimzer
+- 
+**Legends:**
+```diff
+- layers-size 5, bs 512, lr 1e-4
++ layers-size 5, bs 512, lr 1e-4
+! layers-size 5, bs 512, lr 1e-4
+```
 
 ![ResCNN Train Loss](lab1/res_train_loss) ![ResCNN Test Loss]((lab1/res_test_loss) ![ResCNN Test Accuracy](lab1/res_test_accuracy)
 <p align="center">
-  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Train Loss">
-  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Test Loss">
-  <img src="lab1/images/res_train_loss.png" width="300" alt="ResCNN Test Accuracy">
+  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Train Loss">
+  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Test Loss">
+  <img src="lab1/images/res_train_loss.png" width="200" alt="ResCNN Test Accuracy">
 </p>
 
 <p align="center">
-  <em>CNN Train Loss, </em>
-  <em>CNN Test Loss,  </em>
-  <em>CNN Test Accuracy</em>
+  <em>from left to right: ResCNN Train Loss (ep/loss), </em>
+  <em>ResCNN Test Loss (ep/loss),  </em>
+  <em>ResCNN Test Accuracy (ep/acc)</em>
 </p>
 
 
@@ -96,7 +108,7 @@ The original code required few modifications to work with my custom ResCNN. I ha
 </p>
 
 <p align="center">
-  <em>CIFAR10 Ship, </em>
+  <em>from left to right: CIFAR10 Ship, </em>
   <em>CAM CIFAR10 Ship,  </em>
   <em>Truck from internet,  </em>
   <em>CAM Truck from internet</em>
@@ -143,6 +155,8 @@ I have chosen tu use **AG News dataset**, sourced from Hugging Face. The *AG New
   - 4: Sci/Tech
 - **Total Number of Samples:** 120,000 train, 7,600 test
 
+### Idea
+I choose to use **DistillBert** only as a feature extractor on the AG News Dataset, and train a **OVR-LOgistic-Regression** on these embeddings.
 ### Data Visualization
 
 <p align="center">
@@ -155,37 +169,41 @@ I have chosen tu use **AG News dataset**, sourced from Hugging Face. The *AG New
   <em>TSNE plot of test features</em>
 </p>
 
+It is incredible to see how well the LLM separates the emebedding representation of the 4 different classes.
+This allows the simplest Logistic Regression to work weel even on a benchmark text classification task.
+
 ### Results
 <p align="center">
-  <img src="lab2/images/confusion_matrix.png" height="300" alt="Confusion Matrix for AG News Classification">
-</p>
-<p align="center">
-    <em>Confusion Matrix for AG News Classification</em>
+  <img src="lab2/images/merged.png" height="300" alt="Confusion Matrix and Table metrics evaluation">
 </p>
 
-| Metric                 | Value    |
-|------------------------|----------|
-| Validation Accuracy    | 0.9143   |
-| Validation Precision   | 0.9143   |
-| Validation Recall      | 0.9143   |
-| Validation F1 Score    | 0.9142   |
+
 
 
 ## Lab 3 - Reinforcement Learning
 
-The third and final lab covers reinforcement learning, specifically deep Q learning and PPO. The source code for this lab can be found in the `lab3/` directory.
+The third and final lab covers reinforcement learning, specifically **Deep Q-learning** and . The source code for this lab can be found in the `lab3/` directory.
 
-## Getting Started
+### Code refactoring and Terminal Parameter and Hyperparameter Configuration
+I chose to reactor the original repository, so in the `lab3/` you can find:
+  - `main.py:` it is the main script, it starts the train or the evaluation of the agent
+  - `Parser.py:` contains the implementation of a Parser class, that allows the user to set hyperparameyters and executions parameters from terminal
+  - `DQLN.py:` contains the old implementation of the DQLN
+  - `Trainer.py:` contains the implementaion of a Trainer class, that set-up the environment and train/evaluate the agent
 
-To run the code in this repository, you will need to have Python 3 installed, as well as several deep learning libraries including TensorFlow, PyTorch, and Hugging Face Transformers.
+### PPO
+A Minimal PyTorch implementation of Proximal Policy Optimization (PPO) with clipped objective for Gymnasyum environments has been addes as requested. You can find the implementation in  `PPO.py` (source code on: ["nikhilbarhate99/PPO-PyTorch"](https://github.com/nikhilbarhate99/PPO-PyTorch))
+  
+### Notes
+  
+To run the code in this repository, you will need to have Python 3 installed, as well as several deep learning libraries including PyTorch, and Hugging Face Transformers.
 
-To get started, clone this repository to your local machine and navigate to the directory of the lab you wish to run. From there, you can run the code using the appropriate commands.
+To get started, clone this repository to your local machine and navigate to the directory of the lab you wish to run. From there, you can run each exercise seperately
 
 ## Contributors
 
-This repository was created by [your name]. If you have any questions or concerns, please contact [your email].
+This repository was created by **Marco Mistretta**. If you have any questions or concerns, please contact marco.mistretta@stud.unifi.it.
 
-## Acknowledgements
+### Acknowledgements
 
-We would like to thank Professor Andrew David Bagdanov for teaching the "Deep Learning Applications" course and providing guidance on these labs. We would also like to acnowledge the creators of the deep learning libraries used in this repository, including TensorFlow, PyTorch, and Hugging Face Transformers.
-</html>
+We would like to thank Professor Andrew David Bagdanov for teaching the **Deep Learning Applications**ì' course and providing guidance on these labs
