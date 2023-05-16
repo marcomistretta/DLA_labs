@@ -57,8 +57,8 @@ Looking at the images, considering that I didn't achieved convergence in the tra
 
 <p align="center">
   <img src="lab1/images/new_res_train_loss.png" width="200" alt="ResCNN Train Loss">
-  <img src="lab1/images/new_res_train_loss.png" width="200" alt="ResCNN Test Loss">
-  <img src="lab1/images/new_res_train_loss.png" width="200" alt="ResCNN Test Accuracy">
+  <img src="lab1/images/new_res_test_loss.png" width="200" alt="ResCNN Test Loss">
+  <img src="lab1/images/new_res_test_accuracy.png" width="200" alt="ResCNN Test Accuracy">
 </p>
 
 <p align="center">
