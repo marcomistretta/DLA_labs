@@ -86,6 +86,7 @@ Different layers size has been compared, all of them show the same results. The 
 <p align="center">
   <em>Mean of the absolute values of the gradients during backprop in the dense layer for the first 150 batch iterations</em>
  </p>
+ 
 ### Extra: Exercise 2.3: *Explain* the predictions of a CNN
 The exercise 2.3 ask to use the CNN model we trained in Exercise 1.2 and implement [*Class Activation Maps*](http://cnnlocalization.csail.mit.edu/#:~:text=A%20class%20activation%20map%20for,decision%20made%20by%20the%20CNN.):
 
